@@ -73,9 +73,9 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.user = {
+  users.users.aiba = {
     isNormalUser = true;
-    description = "user";
+    description = "aiba";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [];

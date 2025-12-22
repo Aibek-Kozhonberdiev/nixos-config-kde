@@ -1,4 +1,4 @@
-# zsh.nix
+# shell.nix
 
 {
   programs.zsh = {

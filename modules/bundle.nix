@@ -1,8 +1,7 @@
-# bundle.nix
-
 {
   imports = [
     ./git.nix
     ./zsh.nix
+    ./wpa.nix
   ];
 }
