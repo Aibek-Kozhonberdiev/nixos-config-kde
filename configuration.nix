@@ -5,7 +5,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./packages.nix
     ./modules/bundle.nix
   ];
 
@@ -20,6 +19,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
   time.timeZone = "Asia/Bishkek";
@@ -82,6 +82,26 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # List packages installed in system profile. To search, run:
+  environment.systemPackages = with pkgs; [
+    # Desktop apps
+    chromium
+    telegram-desktop
+    obs-studio
+
+    # CLI utils
+    fastfetch
+    wget
+    tree
+
+    # Code editor
+    kdePackages.kate
+    vscode
+  ];
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
