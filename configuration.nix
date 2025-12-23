@@ -108,6 +108,16 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Enable the Flatpak.
+  services.flatpak.enable = true;
+  systemd.services.flatpak-repo = {
+    wantedBy = [ "multi-user.target" ];
+    path = [ pkgs.flatpak ];
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    '';
+  };
+
   # Version NixOS
   system.stateVersion = "25.05";
 }
