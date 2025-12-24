@@ -12,9 +12,6 @@
 
           # Python
           ms-python.python
-#           ms-python.debugpy
-#           ms-python.vscode-pylance
-#           ms-python.vscode-python-envs
 
           # UI / Themes
           pkief.material-icon-theme
@@ -22,6 +19,9 @@
 
           # Live Server
           ritwickdey.liveserver
+
+          # Markdown
+          davidanson.vscode-markdownlint
         ];
     })
   ];

@@ -97,12 +97,14 @@
     fastfetch
     wget
     tree
+    htop
 
     # Language runtimes & toolchains
     python314
+    virtualenv
 
     # Code editor
-    kdePackages.kate
+    vscode
   ];
 
   # Enable the OpenSSH daemon.

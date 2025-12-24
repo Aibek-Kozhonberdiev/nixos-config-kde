@@ -8,6 +8,7 @@
     shellAliases = {
       update = "sudo nixos-rebuild switch";
       nixos-clear = "sudo nix-collect-garbage -d";
+      open = "xdg-open";
     };
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
